@@ -5,9 +5,7 @@ import java.util.Map;
 
 /*
  * Given a string, find the length of the longest substring in it with no more than K distinct characters.
-
 You can assume that K is less than or equal to the length of the given string.
-
 ("araaci", 2)//4, The longest substring with no more than '2' distinct characters is "araa".
 ("araaci", 1)//2, The longest substring with no more than '1' distinct characters is "aa".
 ("cbbebi", 3)//5, The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".

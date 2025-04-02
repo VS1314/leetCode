@@ -6,7 +6,6 @@ import java.util.Map;
 /*
  * 159. Longest Substring with at most 2 distinct characters
  * Given a string, find the length of the longest substring, which has no repeating characters.
-
 lengthOfLongestSubstringTwoDistinct('eceba')//3
 lengthOfLongestSubstringTwoDistinct('ccaabbb')//5
  */

@@ -3,7 +3,6 @@ package slidingwindow;
 /*
  * 1708. largest subarray length k
  * Given an array of positive numbers and a positive number K, find the maximum sum of any contiguous subarray of size K.
- * 
  * maxSubarrayOfSizeK([2, 1, 5, 1, 3, 2], 3)//9 
    maxSubarrayOfSizeK([2, 3, 4, 1, 5], 2)//7 
  */
