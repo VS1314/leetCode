@@ -32,7 +32,7 @@ public class Medium_15 {
 
 	public static List<List<Integer>> searchTriplets(int[] nums) {
 		List<List<Integer>> output = new ArrayList<>();
-		Arrays.sort(nums);
+		Arrays.sort(nums);//[-3, -2, -1, 0, 1, 1, 2]
 		System.out.println(Arrays.toString(nums));
 		for (int i = 0; i < nums.length - 2; i++) {
 			if (i > 0 && nums[i] == nums[i - 1]) {
