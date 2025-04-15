@@ -48,8 +48,34 @@ public class Medium_713 {
 		return result;
 	}
 
+	public static int numSubarrayProductLessThanK(int[] nums, int k) {
+		if (k <= 1) {
+			return 0;
+		}
+		int product = 1;
+		int count = 0;
+		int left = 0;
+		for (int right = 0; right < nums.length; right++) {
+			product *= nums[right];
+			while (product >= k) {
+				product /= nums[left++];
+			}
+			count += right - left + 1;
+		}
+		return count;
+	}
+
 	public static void main(String[] args) {
-		findSubarrays(new int[] { 10, 5, 2, 6 }, 100);
+		// to get the subarrays
+		System.out.println(findSubarrays(new int[] {2, 5, 3, 10}, 30)); //[2], [5], [2, 5], [3], [5, 3], [10] There are six contiguous subarrays whose product is less than the target.
+		System.out.println(findSubarrays(new int[] {8, 2, 6, 5}, 50)); //[8], [2], [8, 2], [6], [2, 6], [5], [6, 5] There are seven contiguous subarrays whose product is less than the target.
+		System.out.println(findSubarrays(new int[] { 10, 5, 2, 6 }, 100)); //The 8 subarrays that have product less than 100 are: [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6].
+		// to get the subarrays count
+		System.out.println(numSubarrayProductLessThanK(new int[] {2, 5, 3, 10}, 30));
+		System.out.println(numSubarrayProductLessThanK(new int[] { 10, 5, 2, 6 }, 100));
+		System.out.println(numSubarrayProductLessThanK(new int[] {8, 2, 6, 5}, 50));
+
+		
 	}
 
 }

@@ -79,6 +79,7 @@ public class Medium_259 {
 	}
 
 	public static void main(String[] args) {
+		System.out.println(tripletWithSmallerSum(new int[] { -1, 0, 2, 3 }, 3));
 		System.out.println(searchTriplets(new int[] { -1, 0, 2, 3 }, 3));
 		System.out.println(searchTriplets(new int[] { -1, 4, 2, 1, 3 }, 5));
 		System.out.println(searchTriplets(new int[] { -2, 0, 1, 3 }, 2));
