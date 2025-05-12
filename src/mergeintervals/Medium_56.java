@@ -2,7 +2,6 @@ package mergeintervals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 /*
@@ -27,7 +26,8 @@ public class Medium_56 {
 		if (intervals.length < 2) {
 			return intervals;
 		}
-		Arrays.sort(intervals, Comparator.comparingInt(i -> i[0]));
+		// Arrays.sort(intervals, Comparator.comparingInt(i -> i[0]));
+		Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));//other way to sort
 		List<int[]> result = new ArrayList<>();
 		int[] newInterval = intervals[0];
 		result.add(newInterval);
@@ -43,7 +43,10 @@ public class Medium_56 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(merge(new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } }));
+		int[][] is = merge(new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } });
+		for (int[] is2 : is) {
+			System.out.println(Arrays.toString(is2));
+		}
 	}
 
 }
